@@ -198,7 +198,6 @@ def class1():
     date_att_prev= set()
     for student in all_students:
         date_att_prev.add(student.date_created)
-    
     date_att_prev = list(date_att_prev)
     date_att_prev.sort(reverse=True)
     flash("You have taken "+ str(len(date_att_prev)) + " classes.")

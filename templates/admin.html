@@ -51,9 +51,39 @@
     <br/><br/>
 
 
-    <h1>Capture Images</h1>
-    <h3>Face towards the camera and click the button to capture Images</h3>
-    <form action='{{ url_for("cap_data")}}' method = "POST">
+
+    <div style="text-align: center; display: block; margin-top:20px; margin-left: auto; margin-right: auto; width: 80%;">
+      <img src="https://yoyosarkari.com/wp-content/uploads/2019/12/NIELT.jpg" alt="NIELIT Logo">
+      <h1>Capture Images</h1>
+      <h3>Face towards the camera and click the button to capture Images</h3>
+    </div>
+
+   
+    <div id="loginbox" style="margin-top:6px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+      <div class="panel panel-info">
+              <div class="panel-heading">
+                  <div class="panel-title">Registration</div>
+                  <!-- <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
+              </div>     
+
+              <div style="padding-top:30px" class="panel-body">
+
+                  <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                      
+                  <form action='{{ url_for("cap_data")}}' method = "POST" id="loginform" class="form-horizontal" role="form">
+                              
+                      <div style="margin-bottom: 25px" class="input-group">
+                                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                  <input id="login-username" type="text" class="form-control" name="name" value="" placeholder="Name" required> 
+                                                                         
+                              </div>
+                          
+                      <div style="margin-bottom: 25px" class="input-group">
+                                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                  <input id="login-password" type="number" class="form-control" name="id_student" placeholder="ID" required>
+                              </div>
+                              
+<!-- <form action='{{ url_for("cap_data")}}' method = "POST">
       <input class='form-control mt-6' name="name" placeholder='Name' type="text" required>
 
       <input class='form-control mt-6' name="id_student" placeholder='ID' type="number" required>
@@ -67,7 +97,68 @@
      {% endwith %}
     
       <button type="submit">Capture Images</button>
-  </form>
+  </form>  -->
+                            
+
+    {% with messages = get_flashed_messages() %}  
+  {% if messages %}  
+        {% for message in messages %}  
+             <p>{{ message }}</p>  
+        {% endfor %}  
+  {% endif %}  
+{% endwith %}   
+
+                          
+                          <div style="margin-top:10px" class="form-group">
+                              <!-- Button -->
+
+                              <div class="col-sm-12 controls">
+                                <!-- <a id="btn-login" href="#" class="btn btn-success waves-effect waves-light">Capture Images</a> -->
+                                <button  id="btn-login" class="btn btn-success waves-effect waves-light"  type="submit">Capture Images</button>
+                                
+
+                              </div>
+                          </div>
+
+
+                          <!-- <div class="form-group">
+                              <div class="col-md-12 control">
+                                  <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                      Don't have an account! 
+                                  <a href="#" onclick="$('#loginbox').hide(); $('#signupbox').show()">
+                                      Sign Up </a><a href="https://bbbootstrap.com">Here</a>
+                                  
+                                  </div>
+                              </div>
+                          </div>     -->
+                      </form>     
+
+
+
+                  </div>                     
+              </div>  
+  </div>
+
+
+
+
+
+
+    <!-- <form action='{{ url_for("cap_data")}}' method = "POST">
+      <input class='form-control mt-6' name="name" placeholder='Name' type="text" required>
+
+      <input class='form-control mt-6' name="id_student" placeholder='ID' type="number" required>
+    
+      {% with messages = get_flashed_messages() %}  
+        {% if messages %}  
+              {% for message in messages %}  
+                   <p>{{ message }}</p>  
+              {% endfor %}  
+        {% endif %}  
+     {% endwith %}
+    
+      <button type="submit">Capture Images</button>
+  </form>  -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

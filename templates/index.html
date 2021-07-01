@@ -72,13 +72,15 @@ Attendance Portal
   
       </div> -->
   
+      <div style="text-align: center; display: block; margin-top:20px; margin-left: auto; margin-right: auto; width: 80%;">
+        <img src="https://yoyosarkari.com/wp-content/uploads/2019/12/NIELT.jpg" alt="NIELIT Logo">
+      </div>
 
-
-      <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-        <div class="panel panel-info" >
+      <div id="loginbox" style="margin-top:6px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+        <div class="panel panel-info" style="box-shadow: 10px 10px 8px #888888;"  >
                 <div class="panel-heading">
                     <div class="panel-title">Sign In</div>
-                    <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    <!-- <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
                 </div>     
 
                 <div style="padding-top:30px" class="panel-body" >
@@ -134,15 +136,11 @@ Attendance Portal
                                     
                               </div>
                                 </div>
+                              
                                   
-                                
+                                  <!-- {{wtf.form_field(form.remember)}} -->
+
                                   
-                                  {{wtf.form_field(form.remember)}}
-
-                                   
-
-
-
                         
                                   {% with messages = get_flashed_messages() %}  
                                  {% if messages %}  

@@ -72,14 +72,18 @@
          {% endif %}  
       {% endwith %}
     <h1 style="text-align: center;">Welcome</h1>
-    <h2 style="text-align: center;">These are your classes</h2>
+    <h2 style="text-align: center;">Your Classes</h2>
 
-    <div class="container" >
+    <!-- <div class="container" >
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+              </svg>
   
               <div class="card-body">
                 <h1 >Class 1</h1>
@@ -109,7 +113,37 @@
               </div>
             </div>
           </div>
+        </div></div> -->
+        
+
+        
+
+
+        
+      <div class="container" style="text-align:center;">
+        <div class="row">
+          <div class="column" style="display: inline-block; color: white; width: 80%; height: 80%; padding: 2%; border: 1px solid rgb(9, 9, 243); background-color: gray;">
+            <h2>B.Tech</h2>
+            <p>Semester 3</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center" style="margin-top:6px; margin-bottom:6px;">
+            <div class="btn-group">
+              <a href="{{ url_for('class1') }}" class="btn btn-primary">View Attendance</a>
+            </div>
+            
+          </div>
+
+          <div class="column" style="display: inline-block; color: white; width: 80%; height: 50%; padding: 2%; border: 1px solid rgb(13, 13, 236); background-color: grey;">
+            <h2>M.Tech</h2>
+            <p>Semester 1</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center" style="margin-top:6px; margin-bottom:6px;">
+            <div class="btn-group">
+              <a href="{{ url_for('class2') }}" class="btn btn-primary">View Attendance</a>
+            </div>
+          </div>
         </div>
+      </div>
   
           
     <!-- Optional JavaScript; choose one of the two! -->
